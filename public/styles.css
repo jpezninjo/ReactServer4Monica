@@ -1,0 +1,17 @@
+body {
+	padding: 50px;
+}
+
+.active {
+	background-color: #2980b9;
+	color: whitesmoke;
+}
+
+.photo {
+	display: inline-block;
+	padding: 0 25px;
+}
+
+#p-fetch{
+	border: 2.5px solid green;
+}
