@@ -5,9 +5,6 @@ const connect = require('react-redux').connect;
 
 let Layout = React.createClass({
 
-	displayName: 'Layout //oh nvm the variable name is used instead\
-						//this line is useless',
-
 	_handleClick: function(){
 		alert("JavaScript works!");
 	},
@@ -19,7 +16,12 @@ let Layout = React.createClass({
 			<html>
 				<head>
 					<title>{custom.title}</title>
-					<link rel="stylesheet" href="/styles.css"/>
+
+					<link rel="stylesheet" 
+					href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" 
+					crossOrigin="anonymous"/>
+
+					{/*<link rel="stylesheet" href="/styles.css"/>*/}
 				</head>
 				<body>
 					<h1>{custom.title}</h1>
@@ -28,7 +30,7 @@ let Layout = React.createClass({
 
 					<ul>
 						<li>
-							<Link to='/'>Home</Link>
+							<Link to='/'>Index</Link>
 						</li>
 						<li>
 							<Link to='/about'>About</Link>
@@ -38,6 +40,9 @@ let Layout = React.createClass({
 						</li>
 						<li>
 							<Link to='/fetch'>Fetch</Link>
+						</li>
+						<li>
+							<Link to='/sockets'>Sockets</Link>
 						</li>
 					</ul>
 

@@ -18,6 +18,7 @@ module.exports = (
 			<Route path='about' component={require('./views/About.jsx')}></Route>
 			<Route path='input' component={require('./views/Input.jsx')}></Route>
 			<Route path='fetch' component={require('./views/Fetch.jsx')}></Route>
+			<Route path='sockets' component={require('./views/Sockets.jsx')}></Route>
 		</Route>
 	</Router>
 );

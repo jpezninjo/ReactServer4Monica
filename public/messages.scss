@@ -1,0 +1,62 @@
+$lightgrey: #F1F0F0;
+
+.group-groupchat {
+
+	::-webkit-scrollbar { 
+	    display: none; 
+	}
+	
+	.display-none {
+		display: none !important;
+	}
+	
+	.chat-container {
+		height: 225px;
+		overflow-y: scroll;
+		padding: 15px 10px 25px 10px;
+		border: 1px solid #95a5a6;
+	
+		.author-is-user {
+			text-align: right;
+		}
+		
+		.message-container {
+			font-size: 14px;
+			
+		
+			.message-content, .message-author {
+				padding: 2.5px 12.5px;
+				border-radius: 12.5px;
+				display: inline-block;
+			}
+
+			
+
+
+			.message-content {
+				background-color: $lightgrey;
+			}
+
+			.message-content:not(.link){
+				color: black;
+			}
+
+			.message-author {
+			  font-size: 75%;
+			  margin-top: 2.5px;
+			}
+		}	//.message-container
+
+		.message-container.author-is-user .message-content {
+			background-color: 4080FF;
+			color: white !important;
+		}
+
+	}	//.chat-container
+
+	#group-groupchat-form-message {
+		border-top-left-radius: 0px;
+		border-top-right-radius: 0px; 
+	}
+
+}	//.group-groupchat;
