@@ -13951,6 +13951,7 @@ module.exports = React.createClass({
 
 const React = __webpack_require__(2);
 const GroupChat = __webpack_require__(134);
+const faker = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"faker\""); e.code = 'MODULE_NOT_FOUND'; throw e; }())); // for mocking data
 
 class Group extends React.Component {
 
