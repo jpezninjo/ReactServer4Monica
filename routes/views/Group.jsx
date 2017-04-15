@@ -1,13 +1,12 @@
 const React = require('react');
 const GroupChat = require('./GroupChat.jsx');
-const faker = require("faker");   // for mocking data
 
 class Group extends React.Component {
 
     constructor(props) {
         super(props);
         this.state = {
-            email: faker.internet.userName(),
+            email: "GenericUser",
             groupname: "Generic_Group",
         }
     }

@@ -27,7 +27,8 @@ class GroupChat extends React.Component {
         const socket = io();
 
         this.setState({
-            socket: io()
+            socket: io(),
+            email: $("#group-groupchat-form-name").val()
         });
 
         socket.emit("client connect", {
@@ -90,11 +91,13 @@ class GroupChat extends React.Component {
             <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
             <script src="/socket.io/socket.io.js"></script>
 
+            <script src = "faker.js" type = "text/javascript"/>
+
             <div className="col-sm-1"></div>
             <div className="col-sm-9">
                 <form className="form-horizontal" style={{"marginBottom": "0px"}}>
                     <label className="control-label" htmlFor="email">Current Group:</label>
-                    <input id="group-groupchat-form-message" className="form-control" name="groupname" autoComplete="off" value={this.state.groupname} onChange={this.handleInputChange} style={{"borderBottomLeftRadius": "0px", "borderBottomRightRadius": "0px"}}/>
+                    <input id="group-groupchat-form-group" className="form-control" name="groupname" autoComplete="off" value={this.state.groupname} onChange={this.handleInputChange} style={{"borderBottomLeftRadius": "0px", "borderBottomRightRadius": "0px"}}/>
                 </form>
 
                 <div className="chat-container">
@@ -108,10 +111,11 @@ class GroupChat extends React.Component {
 
                 <form className="form-horizontal">
                     <label className="control-label" htmlFor="email">Logged in:</label>
-                        <input id="group-groupchat-form-message" className="form-control" name="email" autoComplete="off" placeholder={"Id of sender"} value={this.state.email} onChange={this.handleInputChange} />
+                        <input id="group-groupchat-form-name" className="form-control" name="email" autoComplete="off" placeholder={"Id of sender"} onChange={this.handleInputChange} />
                 </form>
+                <span id="cats"></span>
             </div>
-
+            <script src="fake.js" type = "text/javascript"/>
           </div>
         );
     }
