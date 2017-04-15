@@ -2,6 +2,7 @@ const webpack = require('webpack');
 const path = require('path');
 
 let nodeRoot = path.join( __dirname, 'node_modules' );
+let PROD = JSON.parse(process.env.PROD_ENV || '0');
 
 module.exports = {
     entry: './client.js',
@@ -25,7 +26,7 @@ module.exports = {
                 exclude: /node_modules/,
                 loader: 'babel-loader',
                 query: {
-                    presets: ['react']
+                    presets: ['es2015', 'react'],
                 }
             },
             {
@@ -44,8 +45,9 @@ module.exports = {
     },
     plugins: [
         new webpack.DefinePlugin({
-            'process.env.NODE_ENV': JSON.stringify('development')
-        })
+            'process.env.NODE_ENV': JSON.stringify('production')
+        }),
+        new webpack.optimize.UglifyJsPlugin({minimize: true}),
     ],
     target: 'node',
 }

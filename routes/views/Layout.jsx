@@ -51,7 +51,7 @@ let Layout = React.createClass({
 					<script dangerouslySetInnerHTML={{
 						__html: 'window.PROPS=' + JSON.stringify(custom)
 					}}/>
-					<script src="/bundle.js"/> 
+					<script src="/bundle.js"/>
 				</body>
 			</html>
 			)
