@@ -113,7 +113,6 @@ class GroupChat extends React.Component {
                     <label className="control-label" htmlFor="email">Logged in:</label>
                         <input id="group-groupchat-form-name" className="form-control" name="email" autoComplete="off" placeholder={"Id of sender"} onChange={this.handleInputChange} />
                 </form>
-                <span id="cats"></span>
             </div>
             <script src="fake.js" type = "text/javascript"/>
           </div>

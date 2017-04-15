@@ -14141,8 +14141,7 @@ class GroupChat extends React.Component {
                         'Logged in:'
                     ),
                     React.createElement('input', { id: 'group-groupchat-form-name', className: 'form-control', name: 'email', autoComplete: 'off', placeholder: "Id of sender", onChange: this.handleInputChange })
-                ),
-                React.createElement('span', { id: 'cats' })
+                )
             ),
             React.createElement('script', { src: 'fake.js', type: 'text/javascript' })
         );
